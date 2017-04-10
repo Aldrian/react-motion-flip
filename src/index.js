@@ -121,6 +121,7 @@ class FlipMotion extends Component<void, Props, State> {
                   transform: `translate(${ item.style.x }px, ${ item.style.y }px) scale(${ item.style.scale })`,
                   WebkitTransform: `translate(${ item.style.x }px, ${ item.style.y }px) scale(${ item.style.scale })`,
                 }}
+                className={this.props.childClassName}
                 ref={(c) => this.children[item.key] = c}
               >
                 {item.data}
@@ -158,6 +159,7 @@ type Props = {
   component?: string | ReactClass,
   childComponent?: string | ReactClass,
   className?: string,
+  childClassName?: string,
 }
 
 export default FlipMotion
